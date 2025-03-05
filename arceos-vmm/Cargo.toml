@@ -20,7 +20,7 @@ timer_list = "0.1.0"
 axstd = { workspace = true, features = [
     "alloc",
     "paging",
-    # "fs",
+    "fs",
     "irq",
     "hv",
     "multitask",

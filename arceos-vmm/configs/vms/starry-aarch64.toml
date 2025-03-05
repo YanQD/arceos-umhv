@@ -1,20 +1,22 @@
 id = 1
-name = "arceos"
+name = "starry"
 vm_type = 1
 cpu_num = 1
 phys_cpu_sets = [1]
-entry_point = 0x4020_0000
+entry_point = 0x4008_0000
 image_location = "fs"
 kernel_path = "helloworld_aarch64-qemu-virt.bin"
 # kernel_path = "linux-6.6.62.bin"
-kernel_load_addr = 0x4020_0000
+kernel_load_addr = 0x4008_0000
+dtb_load_addr = 0x4000_0000
+dtb_path = "helloworld_aarch64-qemu-virt.bin"
 # ramdisk_path = ""
 # ramdisk_load_addr = 0
 # disk_path = "disk.img"
 # Memory regions with format (`base_paddr`, `size`, `flags`, `map_type`).
 # For `map_type`, 0 means `MAP_ALLOC`, 1 means `MAP_IDENTICAL`.
 memory_regions = [
-    [0x4000_0000, 0x100_0000, 0x7, 0], # Low RAM		    16M 0b00111 R|W|EXECUTE
+    [0x4000_0000, 0x100_0000, 0x7, 0], # Low RAM            16M 0b00111 R|W|EXECUTE
 ]
 
 # Emu_devices
